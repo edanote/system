@@ -1,0 +1,36 @@
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcSuffix
+olcSuffix: dc=virtualhost,dc=com
+-
+replace: olcRootDN
+olcRootDN: cn=ldapadmin,dc=virtualhost,dc=com
+-
+replace: olcRootPW
+olcRootPW: {SSHA}rR2HKhZail97gY4/yhCFXNj1+iCFmhHP
+-
+add: olcSyncRepl
+olcSyncRepl: rid=006 provider=ldap://server1.virtualhost.com binddn="cn=ldapadmin,dc=virtualhost,dc=com" bindmethod=simple
+  credentials=1234567 searchbase="dc=virtualhost,dc=com" type=refreshOnly
+  interval=00:00:00:10 retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=007 provider=ldap://server2.virtualhost.com binddn="cn=ldapadmin,dc=virtualhost,dc=com" bindmethod=simple
+  credentials=1234567 searchbase="dc=virtualhost,dc=com" type=refreshOnly
+  interval=00:00:00:10 retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=008 provider=ldap://server3.virtualhost.com binddn="cn=ldapadmin,dc=virtualhost,dc=com" bindmethod=simple
+  credentials=1234567 searchbase="dc=virtualhost,dc=com" type=refreshOnly
+  interval=00:00:00:10 retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=009 provider=ldap://server4.virtualhost.com binddn="cn=ldapadmin,dc=virtualhost,dc=com" bindmethod=simple
+  credentials=1234567 searchbase="dc=virtualhost,dc=com" type=refreshOnly
+  interval=00:00:00:10 retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=010 provider=ldap://server5.virtualhost.com binddn="cn=ldapadmin,dc=virtualhost,dc=com" bindmethod=simple
+  credentials=1234567 searchbase="dc=virtualhost,dc=com" type=refreshOnly
+  interval=00:00:00:10 retry="5 5 300 5" timeout=1
+-
+add: olcDbIndex
+olcDbIndex: entryUUID  eq
+-
+add: olcDbIndex
+olcDbIndex: entryCSN  eq
+-
+add: olcMirrorMode
+olcMirrorMode: TRUE

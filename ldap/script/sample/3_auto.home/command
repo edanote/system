@@ -1,0 +1,2 @@
+ldapadd -x -W -D "cn=ldapadmin,dc=virtualhost,dc=com" -f auto-home.ldif
+ldapadd -x -W -D "cn=ldapadmin,dc=virtualhost,dc=com" -f auto-home1.ldif

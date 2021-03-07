@@ -1,0 +1,10 @@
+dn: nisMapName=auto.home,ou=automount,DC
+objectClass: top
+objectClass: nisMap
+nisMapName: auto.home
+
+dn: cn=*,nisMapName=auto.home,ou=automount,DC
+objectClass: nisObject
+cn: *
+nisMapEntry: -rw,sync 192.168.10.7:/tv/&
+nisMapName: auto.home

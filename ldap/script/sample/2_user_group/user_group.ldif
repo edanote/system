@@ -1,0 +1,24 @@
+dn: uid=ldaptest,ou=People,dc=virtualhost,dc=com
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: ldaptest
+uid: ldaptest
+uidNumber: 10000
+gidNumber: 1000
+homeDirectory: /home/ldaptest
+loginShell: /bin/bash
+gecos: LDAP Replication Test User
+userPassword: {SSHA}XMhwmYXDgnh1eDdf4MJI3+L+C0h7zFWB
+shadowLastChange: 17058
+shadowMin: 0
+shadowMax: 99999
+shadowWarning: 7
+ou:BeiJing
+
+dn: cn=cad,ou=Group,dc=virtualhost,dc=com
+cn: cad
+gidnumber: 1000
+objectclass: posixGroup
+objectclass: top

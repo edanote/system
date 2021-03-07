@@ -1,0 +1,27 @@
+dn: DC
+dc: virtualhost
+objectClass: top
+objectClass: domain
+
+dn: cn=RootDN ,DC
+objectClass: organizationalRole
+cn: RootDN
+description: LDAP Manager
+
+dn: ou=People,DC
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Group,DC
+objectClass: organizationalUnit
+ou: Group
+
+dn: ou=automount,DC
+objectClass: organizationalUnit
+ou: automount
+
+dn: ou=Hosts,DC
+objectclass: organizationalUnit
+objectclass: top
+ou: Hosts
+

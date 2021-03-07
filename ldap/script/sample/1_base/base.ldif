@@ -1,0 +1,27 @@
+dn: dc=virtualhost,dc=com
+dc: virtualhost
+objectClass: top
+objectClass: domain
+
+dn: cn=ldapadmin ,dc=virtualhost,dc=com
+objectClass: organizationalRole
+cn: ldapadmin
+description: LDAP Manager
+
+dn: ou=People,dc=virtualhost,dc=com
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Group,dc=virtualhost,dc=com
+objectClass: organizationalUnit
+ou: Group
+
+dn: ou=automount,dc=virtualhost,dc=com
+objectClass: organizationalUnit
+ou: automount
+
+dn: ou=Hosts,dc=virtualhost,dc=com
+objectclass: organizationalUnit
+objectclass: top
+ou: Hosts
+

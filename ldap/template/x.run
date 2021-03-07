@@ -1,0 +1,9 @@
+ldapmodify -Y EXTERNAL -H ldapi:/// -f syncprov.ldif
+ldapmodify -Y EXTERNAL -H ldapi:/// -f olcdatabasehdb.ldif
+ldapmodify -Y EXTERNAL -H ldapi:/// -f monitor.ldif
+
+ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/cosine.ldif
+ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/nis.ldif 
+ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/inetorgperson.ldif
+
+ldapadd -x -W -D "cn=ldapadm,dc=itzgeek,dc=local" -f base.ldif

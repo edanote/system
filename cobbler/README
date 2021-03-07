@@ -1,0 +1,19 @@
+This script was tested under centos 7.7.1908 docker
+
+After run centos 7.7.1908 docker
+Please do following step in docker
+
+1, Modify IP address in cobbler_setup.sh
+   run ./cobbler_setup.sh
+2, import OS and restart service
+   cobbler import --path=/ISO/rhel7.7 --name=rhel7.7 --arch=x86_64
+3, copy ks/* to /var/lib/cobbler/kickstarts
+4, machine directory is used to generate config file for each server
+   edit server.xlsx then run gen.py
+   run cobbler_hosts.sh, this will cobbler system
+   ansible.host is for Ansible
+   hosts is for nis system
+5, set server to Boot from network, and take a rest
+   OS will install automatically,root password is 123456
+
+

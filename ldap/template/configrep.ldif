@@ -1,0 +1,24 @@
+### Update Server ID with LDAP URL ###
+
+dn: cn=config
+changetype: modify
+replace: olcServerID
+#configrep_olcServerID
+
+### Enable Config Replication###
+
+dn: olcOverlay=syncprov,olcDatabase={0}config,cn=config
+changetype: add
+objectClass: olcOverlayConfig
+objectClass: olcSyncProvConfig
+olcOverlay: syncprov
+
+### Adding config details for confDB replication ###
+
+dn: olcDatabase={0}config,cn=config
+changetype: modify
+add: olcSyncRepl
+#configrep_olcSyncRepl
+-
+add: olcMirrorMode
+olcMirrorMode: TRUE

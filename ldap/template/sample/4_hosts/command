@@ -1,0 +1,1 @@
+ldapadd -x -W -D "cn=RootDN,DC" -f host.ldif

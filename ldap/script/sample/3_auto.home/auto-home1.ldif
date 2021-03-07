@@ -1,0 +1,10 @@
+dn: nisMapName=auto.home1,ou=automount,dc=virtualhost,dc=com
+objectClass: top
+objectClass: nisMap
+nisMapName: auto.home1
+
+dn: cn=/mnt/tv,nisMapName=auto.home1,ou=automount,dc=virtualhost,dc=com
+objectClass: nisObject
+cn: /mnt/tv
+nisMapEntry: -rw,sync 192.168.10.7:/tv
+nisMapName: auto.home1

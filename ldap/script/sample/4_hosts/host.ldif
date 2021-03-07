@@ -1,0 +1,14 @@
+dn: cn=gojira+ipHostNumber=192.168.10.11,ou=Hosts,dc=virtualhost,dc=com
+objectClass: ipHost
+objectClass: device
+objectClass: top
+cn: gitlab
+ipHostNumber: 192.168.10.11
+
+dn: cn=gamera+ipHostNumber=192.168.10.12,ou=Hosts,dc=virtualhost,dc=com
+objectClass: ipHost
+objectClass: device
+objectClass: top
+cn: docker
+ipHostNumber: 192.168.11.12
+#description: ddddd

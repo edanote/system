@@ -1,0 +1,3 @@
+olcSyncRepl: rid=SERVERID_zero provider=ldap://SERVERNAME binddn="cn=config"
+  bindmethod=simple credentials=configRootPW searchbase="cn=config"
+  type=refreshAndPersist retry="5 5 300 5" timeout=1

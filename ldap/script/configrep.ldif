@@ -1,0 +1,42 @@
+### Update Server ID with LDAP URL ###
+
+dn: cn=config
+changetype: modify
+replace: olcServerID
+olcServerID: 1 ldap://server1.virtualhost.com
+olcServerID: 2 ldap://server2.virtualhost.com
+olcServerID: 3 ldap://server3.virtualhost.com
+olcServerID: 4 ldap://server4.virtualhost.com
+olcServerID: 5 ldap://server5.virtualhost.com
+
+### Enable Config Replication###
+
+dn: olcOverlay=syncprov,olcDatabase={0}config,cn=config
+changetype: add
+objectClass: olcOverlayConfig
+objectClass: olcSyncProvConfig
+olcOverlay: syncprov
+
+### Adding config details for confDB replication ###
+
+dn: olcDatabase={0}config,cn=config
+changetype: modify
+add: olcSyncRepl
+olcSyncRepl: rid=001 provider=ldap://server1.virtualhost.com binddn="cn=config"
+  bindmethod=simple credentials=1234 searchbase="cn=config"
+  type=refreshAndPersist retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=002 provider=ldap://server2.virtualhost.com binddn="cn=config"
+  bindmethod=simple credentials=1234 searchbase="cn=config"
+  type=refreshAndPersist retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=003 provider=ldap://server3.virtualhost.com binddn="cn=config"
+  bindmethod=simple credentials=1234 searchbase="cn=config"
+  type=refreshAndPersist retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=004 provider=ldap://server4.virtualhost.com binddn="cn=config"
+  bindmethod=simple credentials=1234 searchbase="cn=config"
+  type=refreshAndPersist retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=005 provider=ldap://server5.virtualhost.com binddn="cn=config"
+  bindmethod=simple credentials=1234 searchbase="cn=config"
+  type=refreshAndPersist retry="5 5 300 5" timeout=1
+-
+add: olcMirrorMode
+olcMirrorMode: TRUE

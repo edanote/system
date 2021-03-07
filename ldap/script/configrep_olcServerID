@@ -1,0 +1,5 @@
+olcServerID: 1 ldap://server1.virtualhost.com
+olcServerID: 2 ldap://server2.virtualhost.com
+olcServerID: 3 ldap://server3.virtualhost.com
+olcServerID: 4 ldap://server4.virtualhost.com
+olcServerID: 5 ldap://server5.virtualhost.com

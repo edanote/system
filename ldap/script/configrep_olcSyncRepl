@@ -1,0 +1,15 @@
+olcSyncRepl: rid=001 provider=ldap://server1.virtualhost.com binddn="cn=config"
+  bindmethod=simple credentials=1234 searchbase="cn=config"
+  type=refreshAndPersist retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=002 provider=ldap://server2.virtualhost.com binddn="cn=config"
+  bindmethod=simple credentials=1234 searchbase="cn=config"
+  type=refreshAndPersist retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=003 provider=ldap://server3.virtualhost.com binddn="cn=config"
+  bindmethod=simple credentials=1234 searchbase="cn=config"
+  type=refreshAndPersist retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=004 provider=ldap://server4.virtualhost.com binddn="cn=config"
+  bindmethod=simple credentials=1234 searchbase="cn=config"
+  type=refreshAndPersist retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=005 provider=ldap://server5.virtualhost.com binddn="cn=config"
+  bindmethod=simple credentials=1234 searchbase="cn=config"
+  type=refreshAndPersist retry="5 5 300 5" timeout=1

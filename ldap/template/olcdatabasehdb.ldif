@@ -1,0 +1,22 @@
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcSuffix
+olcSuffix: DC
+-
+replace: olcRootDN
+olcRootDN: cn=RootDN,DC
+-
+replace: olcRootPW
+olcRootPW: RootDNPW_SSHA
+-
+add: olcSyncRepl
+#olcdatabasehdb_olcSyncRepl
+-
+add: olcDbIndex
+olcDbIndex: entryUUID  eq
+-
+add: olcDbIndex
+olcDbIndex: entryCSN  eq
+-
+add: olcMirrorMode
+olcMirrorMode: TRUE

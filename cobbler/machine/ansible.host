@@ -1,0 +1,15 @@
+# add ansible hosts list
+
+[simserver]
+serverA1
+serverA2
+serverA3
+serverA4
+serverA5
+
+[vncserver]
+serverB1
+serverB2
+serverB3
+serverB4
+serverB5

@@ -1,0 +1,2 @@
+ldapadd -x -W -D "cn=RootDN,DC" -f auto-home.ldif
+ldapadd -x -W -D "cn=RootDN,DC" -f auto-home1.ldif

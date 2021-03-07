@@ -1,0 +1,6 @@
+[ltb-project-noarch]
+name=LTB project packages (noarch)
+baseurl=https://ltb-project.org/rpm/$releasever/noarch
+enabled=1
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-LTB-project

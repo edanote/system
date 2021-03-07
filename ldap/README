@@ -1,0 +1,25 @@
+This script is used to generate ldap multi-master setting
+
+ldap server
+1, edit line 5~9 in ldap.sh
+   then run ldap.sh
+   it will generate script directory
+2, run run_on_server* on each machine
+   run run_on_phpadmin.sh on any of the ldap server
+   you can visit phpldapadmin by http://hostip/phpldapadmin
+
+ldap client
+1, add ldap authorize
+   yum install nss-pam-ldapd openldap-clients openldap -y
+   authconfig --enableldap --enableldapauth --ldapserver="192.168.10.31" --ldapbasedn="dc=virtualhost,dc=com" --update --enableforcelegacy
+   systemctl restart nslcd
+   please update 192.168.10.31 & dc=virtualhost,dc=com
+
+2, add automount
+   import auto.home/auto1.home in ldap server
+   add below command to /etc/auto.master on ldap client
+   /home	ldap:nisMapName=auto.home,ou=automount,dc=virtualhost,dc=com
+   /-	        ldap:nisMapName=auto.home1,ou=automount,dc=virtualhost,dc=com
+   
+change passwd
+https://devopstack.cn/linux/394.html#16_OpenLDAPSelf_Service_Password

@@ -1,0 +1,15 @@
+olcSyncRepl: rid=006 provider=ldap://server1.virtualhost.com binddn="cn=RootDN,DC" bindmethod=simple
+  credentials=1234567 searchbase="DC" type=refreshOnly
+  interval=00:00:00:10 retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=007 provider=ldap://server2.virtualhost.com binddn="cn=RootDN,DC" bindmethod=simple
+  credentials=1234567 searchbase="DC" type=refreshOnly
+  interval=00:00:00:10 retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=008 provider=ldap://server3.virtualhost.com binddn="cn=RootDN,DC" bindmethod=simple
+  credentials=1234567 searchbase="DC" type=refreshOnly
+  interval=00:00:00:10 retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=009 provider=ldap://server4.virtualhost.com binddn="cn=RootDN,DC" bindmethod=simple
+  credentials=1234567 searchbase="DC" type=refreshOnly
+  interval=00:00:00:10 retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=010 provider=ldap://server5.virtualhost.com binddn="cn=RootDN,DC" bindmethod=simple
+  credentials=1234567 searchbase="DC" type=refreshOnly
+  interval=00:00:00:10 retry="5 5 300 5" timeout=1
